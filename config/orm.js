@@ -22,7 +22,7 @@ function objToSql(ob) {
       if (typeof value === `string` && value.indexOf(` `) >= 0) {
         value = `'${ value }'`;
       }
-      arr.push(`${key }=${ value}`);
+      arr.push(`${ key }=${ value }`);
     }
   }
   return arr.toString();
@@ -35,12 +35,11 @@ const orm = {
       if (err) {
         throw err;
       }
-      console.log(result);
       cb(result);
     });
   },
   insertOne(table, cols, vals, cb) {
-    let queryString = `INSERT INTO ${ table}`;
+    let queryString = `INSERT INTO ${ table }`;
 
     queryString += ` (`;
     queryString += cols.toString();
@@ -48,7 +47,6 @@ const orm = {
     queryString += `VALUES (`;
     queryString += printQuestionMarks(vals.length);
     queryString += `) `;
-
     console.log(queryString);
 
     connection.query(queryString, vals, (err, result) => {
@@ -59,7 +57,7 @@ const orm = {
     });
   },
   updateOne(table, objColVals, condition, cb) {
-    let queryString = `UPDATE ${ table}`;
+    let queryString = `UPDATE ${ table }`;
 
     queryString += ` SET `;
     queryString += objToSql(objColVals);
