@@ -8,13 +8,13 @@ const burger = {
       cb(res);
     });
   },
-  create(cb) {
-    orm.insertOne(`burgers`, res => {
+  create(cols, vals, cb) {
+    orm.insertOne(`burgers`, cols, vals, res => {
       cb(res);
     });
   },
-  update(cb) {
-    orm.updateOne(`burgers`, res => {
+  update(objColVals, condition, cb) {
+    orm.updateOne(`burgers`, objColVals, condition, res => {
       cb(res);
     });
   }
