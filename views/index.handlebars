@@ -11,10 +11,7 @@
                 <ul>
                     {{#each burger}}
                     {{#unless devoured}}
-                    <li class="d-flex align-items-center justify-content-between py-1">
-                        {{ burger_name }}
-                        <button type="button" class="btn btn-success" data-id="{{ id }}">EAT ME</button>
-                    </li>
+                    {{> burgers/burger-block devoured=false}}
                     {{/unless}}
                     {{/each}}
                 </ul>
@@ -23,7 +20,7 @@
                 <h4 class="text-center font-weight-bold">DEVOURED</h4>
                 {{#each burger}}
                 {{#if devoured}}
-                {{> burgers/burger-block devoured=false}}
+                {{> burgers/burger-block devoured=true}}
                 {{/if}}
                 {{/each}}
             </div>
@@ -33,8 +30,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-md-6">
-
-                <form class="create-form text-center">
+                <form class="create-burger text-center">
                     <div class="form-group">
                         <input type="text" class="form-control" id="burger" name="name">
                     </div>
