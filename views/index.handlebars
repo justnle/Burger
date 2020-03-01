@@ -14,9 +14,9 @@
             </div>
         </div>
         <div class="row justify-content-around">
-            <div class="col-md-4">
-                <h1 class="text-center font-weight-bold pb-3"><u>MENU</u></h1>
-                <ul>
+            <div class="col-md-4 burger-list">
+                <h2 class="text-center font-weight-bold py-3">MENU</h2>
+                <ul class="item-list pb-4">
                     {{#each burger}}
                     {{#unless devoured}}
                     {{> burgers/burger-block devoured=false}}
@@ -24,13 +24,15 @@
                     {{/each}}
                 </ul>
             </div>
-            <div class="col-md-4">
-                <h1 class="text-center font-weight-bold pb-3"><u>DEVOURED</u></h1>
-                {{#each burger}}
-                {{#if devoured}}
-                {{> burgers/burger-block devoured=true}}
-                {{/if}}
-                {{/each}}
+            <div class="col-md-4 burger-list">
+                <h2 class="text-center font-weight-bold py-3">DEVOURED</h2>
+                <ul class="item-list pb-4">
+                    {{#each burger}}
+                    {{#if devoured}}
+                    {{> burgers/burger-block devoured=true}}
+                    {{/if}}
+                    {{/each}}
+                </ul>
             </div>
         </div>
         <div class="row justify-content-center pt-5">
@@ -38,9 +40,9 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <form class="create-burger text-center">
+                <form class="create-burger text-center px-2">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="burger" name="name">
+                        <input type="text" class="form-control px-5" id="burger" name="name">
                     </div>
                     <button class="btn btn-danger" type="submit">Cook it up!</button>
                 </form>
