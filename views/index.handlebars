@@ -1,13 +1,14 @@
 <div class="container">
     <div class="row d-flex flex-column align-items-center py-3">
         <h4 class="font-italic">WELCOME TO</h4>
-        <h1 class="font-weight-bold display-3">Good Burger</h1>
+        <h1 class="font-weight-bold display-3">Cutie Burger</h1>
+        <img class="burger-picture" src="/assets/images/Cute-Summer-Burger.jpg" alt="burger-pic">
     </div>
 
     <div id="content-wrapper" class="rounded py-5">
         <div class="row justify-content-around">
             <div class="col-md-4">
-                <h4 class="text-center font-weight-bold">MENU</h4>
+                <h1 class="text-center font-weight-bold pb-3"><u>MENU</u></h1>
                 <ul>
                     {{#each burger}}
                     {{#unless devoured}}
@@ -17,7 +18,7 @@
                 </ul>
             </div>
             <div class="col-md-4">
-                <h4 class="text-center font-weight-bold">DEVOURED</h4>
+                <h1 class="text-center font-weight-bold pb-3"><u>DEVOURED</u></h1>
                 {{#each burger}}
                 {{#if devoured}}
                 {{> burgers/burger-block devoured=true}}
@@ -26,7 +27,7 @@
             </div>
         </div>
         <div class="row justify-content-center pt-5">
-            <h2>Add-A-Burger</h2>
+            <h2>Add A Cutie-Burger</h2>
         </div>
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -34,7 +35,7 @@
                     <div class="form-group">
                         <input type="text" class="form-control" id="burger" name="name">
                     </div>
-                    <button class="btn btn-danger" type="submit">Cook Burger!</button>
+                    <button class="btn btn-danger" type="submit">Cook it up!</button>
                 </form>
             </div>
         </div>
