@@ -13,7 +13,6 @@ $(() => {
       type: `PUT`,
       data: newDevouredState
     }).then(() => {
-      console.log(`changed devoured to`, newDevoured);
       location.reload();
     });
   });
@@ -29,7 +28,6 @@ $(() => {
       type: `POST`,
       data: newBurger
     }).then(() => {
-      console.log(`Added a new burger!`);
       location.reload();
     });
   });
@@ -40,7 +38,6 @@ $(() => {
     $.ajax(`/api/burgers/${ id }`, {
       type: `DELETE`
     }).then(() => {
-      console.log(`Deleted burger`, id);
       location.reload();
     });
   });
