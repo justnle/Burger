@@ -25,9 +25,11 @@ npm start
 
 6. Open the browser and visit [http://localhost:3000/](http://localhost:3000/)
 
+To use the deployed application, click [here](https://cutie-burger.herokuapp.com/)
+
 ### Interaction
 
-The user can add burgers by typing in a name for the burger in the input field followed by pressing the 'Cook it up!' button. The burgers can be eaten by clicking the 'Eat' button, which will move the eaten burgers from the MENU side to the DEVOURED side. The user may also remove the burgers from the database by hitting the 'Trash' button.
+The user can add burgers by typing in a name for the burger in the input field followed by pressing the red 'Cook it up!' button. The burgers can be eaten by clicking the green teeth button, which will move the eaten burgers from the MENU side to the DEVOURED side. The user may also remove the burgers from the database by hitting the yellow garbage button, or 'remake' the burgers by hitting the blue redo button.
 
 ### Screenshots
 
