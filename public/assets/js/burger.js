@@ -33,5 +33,16 @@ $(() => {
       location.reload();
     });
   });
+
+  $(`.trash-burger`).on(`click`, function(event) {
+    const id = $(this).data(`id`);
+
+    $.ajax(`/api/burgers/${ id }`, {
+      type: `DELETE`
+    }).then(() => {
+      console.log(`Deleted burger`, id);
+      location.reload();
+    });
+  });
 });
 

@@ -1,7 +1,7 @@
 <li class="d-flex align-items-center justify-content-between py-1">
     {{burger_name}}
 
-    <button type="button" class="btn {{#if devoured}}btn-warning{{else}}btn-success{{/if}} change-devour"
+    <button type="button" class="btn {{#if devoured}}btn-warning trash-burger{{else}}btn-success change-devour{{/if}}"
         data-id="{{id}}" data-devoured="{{devoured}}">
         {{#if devoured}}TRASH{{else}}EAT{{/if}}
     </button>
