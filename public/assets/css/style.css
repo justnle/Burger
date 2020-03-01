@@ -30,6 +30,17 @@ body {
   border-radius: 5px;
 }
 
+.burger-list {
+  background-color: #ffdbab;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px 30px;
+}
+
+.item-list {
+  margin: 0 10px 0 -30px;
+}
+
 .sticky-footer {
   position: absolute;
   bottom: 0;
