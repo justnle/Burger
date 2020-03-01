@@ -63,11 +63,12 @@ Documentation on dependencies:
 
 # Enhancements
 
-Burger name validation is a must. Currently users can add any 'burger name' that they want which is not intentional.
+Burger name validation is a must since currently users can add any 'burger name' that they want, which is not intentional. Also, since the burgers are listed with their ID (was shown in the demo video for the assignment), the ID numbers will continue to increase. Not sure if I quite enjoy that, but it is interesting to see how many times users have interacted with the application.
 
 # References
 
-- [www.freevector.com](www.freevector.com) - Free Burger Vector
+- [www.freevector.com](https://www.freevector.com) - Free Burger Vector
+- [www.fontawesome.com](https://www.fontawesome.com) - Free icons
 
 # License
 
