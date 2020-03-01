@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row d-flex flex-column align-items-center py-3">
+        <h4 class="font-italic">WELCOME TO</h4>
+        <h1 class="font-weight-bold display-3">Good Burger</h1>
+    </div>
+
+    <div id="content-wrapper" class="rounded py-5">
+        <div class="row justify-content-around">
+            <div class="col-md-4">
+                <h4 class="text-center font-weight-bold">MENU</h4>
+                <ul>
+                    {{#each burger}}
+                    {{#unless devoured}}
+                    <li class="d-flex align-items-center justify-content-between py-1">
+                        {{ burger_name }}
+                        <button type="button" class="btn btn-success" data-id="{{ id }}">EAT ME</button>
+                    </li>
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4 class="text-center font-weight-bold">DEVOURED</h4>
+                {{#each burger}}
+                {{#if devoured}}
+                {{> burgers/burger-block devoured=false}}
+                {{/if}}
+                {{/each}}
+            </div>
+        </div>
+        <div class="row justify-content-center pt-5">
+            <h2>Add-A-Burger</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+
+                <form class="create-form text-center">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="burger" name="name">
+                    </div>
+                    <button class="btn btn-danger" type="submit">Cook Burger!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
