@@ -1,8 +1,14 @@
 <li class="d-flex align-items-center justify-content-between py-1 menus">
     {{id}}. {{burger_name}}
 
-    <button type="button" title="{{#if devoured}}Trash {{else}}Eat{{/if}}" class="btn {{#if devoured}}btn-warning trash-burger {{else}}btn-success
+    <div>
+        {{#if devoured}}
+        <button type="button" title="Remake" class="btn btn-primary remake-burger" data-id="{{id}}"
+            data-devoured="{{devoured}}"><i class="fas fa-redo"></i></button>
+        {{/if}}
+        <button type="button" title="{{#if devoured}}Trash {{else}}Eat{{/if}}" class="btn {{#if devoured}}btn-warning trash-burger {{else}}btn-success
         change-devour{{/if}}" data-id="{{id}}" data-devoured="{{devoured}}">
-        {{#if devoured}}<i class="fas fa-trash-alt"></i>{{else}}<i class="fas fa-teeth-open"></i>{{/if}}
-    </button>
+            {{#if devoured}}<i class="fas fa-trash-alt"></i>{{else}}<i class="fas fa-teeth-open"></i>{{/if}}
+        </button>
+    </div>
 </li>
