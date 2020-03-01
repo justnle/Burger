@@ -10,26 +10,25 @@ router.get(`/`, (req, res) => {
     const hbsObject = {
       burger: data
     };
-    console.log(hbsObject);
     res.render(`index`, hbsObject);
   });
 });
 
 router.post(`/api/burgers`, (req, res) => {
-  burger.create([`burger_name`], [req.body.burger_name], result => {
+  burger.create([`burger_name`], [req.body.name], result => {
     res.json({ id: result.insertId });
   });
 });
 
 router.put(`/api/burgers/:id`, (req, res) => {
-  const condition = `id = ${ req.params.id}`;
+  const condition = `id = ${ req.params.id }`;
   const badRequest = 400;
   const okRequest = 200;
 
   console.log(`condition`, condition);
 
   burger.update(
-    { devour: req.body.devour },
+    { devoured: req.body.devoured },
     condition,
     result => {
       if (result.changedRows === 0) {
