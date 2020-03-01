@@ -4,5 +4,18 @@ body {
 }
 
 #content-wrapper {
+  background-color: #dcffab;
+  border: 10px solid #a75454;
+}
+
+.burger-picture {
+  max-width: 30%;
+}
+
+.menus {
   background-color: white;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid black;
+  border-radius: 5px;
 }
